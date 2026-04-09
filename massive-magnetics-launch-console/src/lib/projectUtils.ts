@@ -111,3 +111,8 @@ export const getProjectStats = (projects: Project[]): ProjectStats => {
     { total: 0, featured: 0, active: 0, research: 0, totalStars: 0 }
   );
 };
+
+export const getProjectBySlug = (
+  projects: Project[],
+  slug: string
+): Project | undefined => projects.find((p) => p.slug === slug);
